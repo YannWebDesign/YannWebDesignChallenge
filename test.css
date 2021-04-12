@@ -1,0 +1,115 @@
+/* Utilisition deu display flex afin que les elements puissent modifier leurs dimensions */
+.container{
+    display: flex;
+    justify-content: left;
+    max-width: 940px;
+    overflow: hidden;
+    
+}
+
+/*Ajustement de la police, et inclusion de l'import de ma police d'ecriture, avec inclusion text shadow pour que mon titre bénéficie d'un reflet  */
+.title-big{
+    color: rgb(0, 21, 66);
+    font-size: 45px;
+    padding: 14px;
+    margin: auto;
+    font-variant: small-caps;
+    font-family: 'Vollkorn SC', serif, cursive;
+    text-shadow: 5px 5px #dde2e7;
+
+}
+
+/* Taille en px de mes titres */
+.title{
+    font-size: 25px;
+}
+
+/* Indique la couleur de mes étoiles */
+.checked {
+    color: rgb(248, 185, 10);
+}
+
+/* Position et police d'ecriture en ce qui concerne ma classe nav */
+.nav {
+    display: flex;
+    font-size: 15px;
+    line-height: 1px;
+    font-family: 'Vollkorn SC', serif;
+    opacity: 0.7;
+}
+/* j indique mes liens bébéficie d'une opacité, ne seront pas soulignés et d'un padding pour un meilleur rendu visuel */
+.nav a {
+    color: rgb(0, 2, 15);
+    padding: 0 23px;
+    opacity: 0.8;
+    text-decoration: none;   
+}
+/* Couleur bleu au passage du curseur pour indiquer à l'utilisateur qu'il s agit d un lien cliquable, avec une opacité plus élévée */
+.nav a:hover {
+    color: rgb(32, 117, 173);
+    opacity: 1; 
+}
+
+
+/* Ajustement taille en hauteur du 2eme enfant de mon contenair */
+.container div:nth-child(2) {
+    height: 560px;
+}
+
+/* Ajustement de mon body et inclusion d'un background en dégradé de couleur */
+body {
+
+    position: relative ;
+    top: -420px;
+    margin: 495px;
+    border-width: 6px;
+    border-style: solid;
+    background: linear-gradient(#000000, #1369a7);
+    
+
+
+/* Ajustement pour que mon contenu soit visible sur differentes taille de support */
+    @media  and (max: width 1200px)
+    {
+        body {
+            font-size: calc(25px + 3.3vw);
+        }
+    }
+}        
+    
+/* Création contenair, ajustement de sa couleur de fond, sa marge et son padding */
+.container{
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    padding: 12px;
+
+
+}
+
+/* J'indique les parametres de ma sous classe item, que represente mon bloc gauche,inclusion de leurs tailles, polices, alignement du texte etc */
+.item{
+    background-color: rgb(247, 247, 247);
+    border: rgb(255, 255, 255);
+    border-radius: 6px;
+    margin:5px;
+    font-size: 19px;
+    text-align: left;
+    flex-basis: 100%;
+    font-family: 'Vollkorn SC', serif;  
+    
+}
+
+/* ajout du inline flex pour que mes deux avis soient alignés l'un à l'autre */
+.item2{
+    display:inline-flex;
+    height: 60px;
+    border: rgb(241, 241, 241);
+    border-radius: 6px;
+    margin: -15px;
+    padding: 12px;
+    font-size: 14px;
+    text-align: left;
+    flex-basis: 30%;
+}
+    
+    
